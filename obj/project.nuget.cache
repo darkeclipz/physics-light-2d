@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "/ZTyiFhPbo5t4i7Xm/b49BUBvZtc1ZGfuFRiWZ02IQbOhiPSp1fvd1apev1UFSgNhdPOm8K0clN1OXZJxZhXLQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lars\\Documents\\Repos\\Light2D\\Light2D.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lars\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Lars\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Lars\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",
+    "C:\\Users\\Lars\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.8\\microsoft.aspnetcore.app.ref.3.1.8.nupkg.sha512",
+    "C:\\Users\\Lars\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.9\\microsoft.netcore.app.host.win-x64.3.1.9.nupkg.sha512"
+  ],
+  "logs": []
+}
