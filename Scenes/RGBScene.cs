@@ -17,7 +17,7 @@ namespace Light2D.Scenes
                 var theta = 2.0 * Math.PI * i / n + Math.PI / 2;
                 (var x, var y) = (r * Math.Cos(theta), r * Math.Sin(theta));
                 AddShape(new Circle(new Vector2(x, y), radius: 0.15, 
-                    diffuse: RGBColor.FromRGB(0.5), emissive: 2 * colors[i])
+                    diffuse: colors[i], emissive: 2 * colors[i])
                 );
             }
 
@@ -28,7 +28,7 @@ namespace Light2D.Scenes
                 var theta = 2.0 * Math.PI * i / n + Math.PI / 2;
                 (var x, var y) = (r * Math.Cos(theta), r * Math.Sin(theta));
                 AddShape(new Circle(new Vector2(x, y), radius: 0.025, 
-                    diffuse: RGBColor.FromRGB(0.5), emissive: RGBColor.Black)
+                    diffuse: RGBColor.FromRGB(0.8), emissive: RGBColor.Black)
                 );
             }
         }

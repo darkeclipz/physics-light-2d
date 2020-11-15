@@ -58,7 +58,7 @@ namespace Light2D.Rendering
 
                 foreach(var lightSampleDirection in sampler.NextLightSampleDirection())
                 {
-                    lightSampleColor += SampleLight(uv, scene, lightSampleDirection) + scene.AmbientColor;
+                    lightSampleColor += SampleLight(uv, scene, lightSampleDirection);
                 }
 
                 pixelSampleColor += 1.0 / sampler.LightSamples * lightSampleColor;
@@ -72,9 +72,17 @@ namespace Light2D.Rendering
         {
             var ray = new Ray(uv, lightSampleDirection);
             (var t, var shape) = Raymarcher.March(ray);
+            if (t < Raymarcher.MinMarchDistance)
+            {
+                return shape.DiffuseColor;
+            }
             if (t < Raymarcher.MaxMarchDistance)
             {
                 return shape.EmissiveColor;
+            }
+            else if(t > Raymarcher.MaxMarchDistance)
+            {
+                return scene.AmbientColor;
             }
             return RGBColor.Black;
         }
