@@ -9,11 +9,14 @@ namespace Light2D.Scenes
     {
         public ShapesScene() : base(ambient: RGBColor.FromRGB(0.15))
         {
-            var circle = new Circle(new Vector2(-0.5, 0), 0.25, Materials.WhiteLight);
+            var circle = new Circle(new Vector2(-0.5, 0.5), 0.25, Materials.WhiteLight);
             AddShape(circle);
 
-            var rectangle = new Rectangle(new Vector2(0.5, 0), new Vector2(0.25), Materials.WhiteLight);
+            var rectangle = new Rectangle(new Vector2(0.5, 0.5), new Vector2(0.25), Materials.WhiteLight);
             AddShape(rectangle);
+
+            var triangle = new Triangle(new Vector2(-0.5, -0.5), 0.25, Materials.WhiteLight);
+            AddShape(triangle);
         }
     }
 }

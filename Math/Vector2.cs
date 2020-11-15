@@ -25,6 +25,7 @@ namespace Light2D
         public static Vector2 operator *(double scalar, Vector2 u) => new Vector2(scalar * u.X, scalar * u.Y);
         public static Vector2 operator %(Vector2 p, Vector2 c) => new Vector2(p.X % c.X, p.Y % c.Y);
         public override string ToString() => $"({X}, {Y})";
+        public Vector2 Copy() => (Vector2)this.MemberwiseClone();
 
         public double Length() => Math.Sqrt(Vector2.Dot(this, this));
         public double LengthSquared() => Vector2.Dot(this, this);

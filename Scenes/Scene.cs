@@ -5,7 +5,7 @@ using Light2D.Shapes;
 
 namespace Light2D.Scenes
 {
-    public abstract class Scene
+    public class Scene
     {
         private List<Shape> Shapes { get; } = new List<Shape>();
         public RGBColor AmbientColor { get; private set; }
