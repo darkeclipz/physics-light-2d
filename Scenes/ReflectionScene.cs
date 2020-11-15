@@ -9,14 +9,13 @@ namespace Light2D.Scenes
     {
         public ReflectionScene() : base(ambient: RGBColor.FromRGB(0.15))
         {
-            AddShape(new Rectangle(new Vector2(0, 0), new Vector2(0.15), Materials.WhiteLight));
-            //Shapes[0].Material.Intensity = 4.0;
-            double d = 0.6;
-            double r = 0.10;
-            AddShape(new Circle(new Vector2(d, 0), r, Materials.Default));
-            AddShape(new Circle(new Vector2(-d, 0), r, Materials.Default));
-            AddShape(new Circle(new Vector2(0.0, d), r, Materials.Default));
-            AddShape(new Circle(new Vector2(0.0, -d), r, Materials.Default));
+            var lightMaterial = Materials.WhiteLight;
+            lightMaterial.Intensity = 2;
+            AddShape(new Circle(new Vector2(-0.5, 0.5), 0.2, lightMaterial));
+
+            var material = Materials.Default;
+            AddShape(new Rectangle(new Vector2(-0.3, -0.5), new Vector2(0.2), material));
+            AddShape(new Rectangle(new Vector2(0.5, -0.3), new Vector2(0.3), material));
         }
     }
 }

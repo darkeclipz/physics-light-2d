@@ -11,7 +11,7 @@ namespace Light2D
         static void Main(string[] args)
         {
             var stopwatch = new Stopwatch();
-            var camera = new Camera(250, 250);
+            var camera = new Camera(500, 500);
             Scene scene = new ReflectionScene();
             Sampler sampler = new StratifiedSampler(pixelSamples: 4, lightSamples: 64);
             var renderer = new Renderer(sampler);
