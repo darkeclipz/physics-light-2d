@@ -18,6 +18,7 @@ namespace Light2D.Colors
         public static RGBColor operator +(RGBColor a, RGBColor b) => new RGBColor(a.R + b.R, a.G + b.G, a.B + b.B);
         public static RGBColor operator *(double scalar, RGBColor c) => new RGBColor(scalar * c.R, scalar * c.G, scalar * c.B);
         public static RGBColor operator *(RGBColor c, double scalar) => new RGBColor(scalar * c.R, scalar * c.G, scalar * c.B);
+        public static RGBColor operator *(RGBColor a, RGBColor b) => new RGBColor(a.R * b.R, a.G * b.G, a.B * b.B);
         public static RGBColor Black { get => new RGBColor(); }
         public static RGBColor White { get => new RGBColor(1); }
         public static RGBColor Red { get => new RGBColor(1, 0, 0); }

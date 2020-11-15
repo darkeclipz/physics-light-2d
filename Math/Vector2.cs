@@ -46,5 +46,6 @@ namespace Light2D
         public static Vector2 Abs(Vector2 u) => new Vector2(Math.Abs(u.X), Math.Abs(u.Y));
         public static Vector2 Max(Vector2 u, double c) => new Vector2(Math.Max(u.X, c), Math.Max(u.Y, c));
         public static Vector2 Min(Vector2 u, double c) => new Vector2(Math.Min(u.X, c), Math.Min(u.Y, c));
+        public static Vector2 Reflect(Vector2 d, Vector2 n) => d - 2.0 * Dot(d, n) * n;
     }
 }

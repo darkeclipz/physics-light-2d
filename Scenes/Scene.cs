@@ -7,7 +7,7 @@ namespace Light2D.Scenes
 {
     public class Scene
     {
-        private List<Shape> Shapes { get; } = new List<Shape>();
+        protected List<Shape> Shapes { get; } = new List<Shape>();
         public RGBColor AmbientColor { get; private set; }
 
         public Scene() : this(RGBColor.Black) { }
