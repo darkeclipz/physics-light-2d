@@ -1,10 +1,10 @@
-using Light2D.Colors;
+using Light2D.Rendering;
 
 namespace Light2D.Shapes
 {
     public class Mandelbrot : Shape
     {
-        public Mandelbrot(Vector2 position, double scale, RGBColor diffuse, RGBColor emissive) : base(diffuse, emissive) 
+        public Mandelbrot(Vector2 position, double scale, Material material) : base(material) 
         {
             Position = position;
             Scale = scale;

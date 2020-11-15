@@ -23,6 +23,7 @@ namespace Light2D
         public static Vector2 operator *(Vector2 u, int scalar) => new Vector2((double)scalar * u.X, (double)scalar * u.Y);
         public static Vector2 operator *(Vector2 u, double scalar) => new Vector2(scalar * u.X, scalar * u.Y);
         public static Vector2 operator *(double scalar, Vector2 u) => new Vector2(scalar * u.X, scalar * u.Y);
+        public static Vector2 operator %(Vector2 p, Vector2 c) => new Vector2(p.X % c.X, p.Y % c.Y);
         public override string ToString() => $"({X}, {Y})";
 
         public double Length() => Math.Sqrt(Vector2.Dot(this, this));
@@ -36,5 +37,8 @@ namespace Light2D
         public static double Dot(Vector2 u, Vector2 v) => u.X * v.X + u.Y * v.Y;
         public static double Distance(Vector2 u, Vector2 v) => (v - u).Length();
         public static double DistanceSquared(Vector2 u, Vector2 v) => (v - u).LengthSquared();
+        public static Vector2 Abs(Vector2 u) => new Vector2(Math.Abs(u.X), Math.Abs(u.Y));
+        public static Vector2 Max(Vector2 u, double c) => new Vector2(Math.Max(u.X, c), Math.Max(u.Y, c));
+        public static Vector2 Min(Vector2 u, double c) => new Vector2(Math.Min(u.X, c), Math.Min(u.Y, c));
     }
 }

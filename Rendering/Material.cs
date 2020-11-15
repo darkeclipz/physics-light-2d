@@ -1,6 +1,6 @@
 using Light2D.Colors;
 
-namespace Light2D.Materials
+namespace Light2D.Rendering
 {
     public class Material
     {
@@ -54,8 +54,15 @@ namespace Light2D.Materials
 
     public static class Materials
     {
+        // Standard materials
         public static Material Default { get => new Material(); }
         public static Material Mirror { get => new Material(RGBColor.Black, RGBColor.Black, 1.0, 1.0); }
         public static Material Glass { get => new Material(RGBColor.Black, RGBColor.Black, 1.0, 0.0, 1.0, 1.4); }
+
+        // Emissive materials
+        public static Material WhiteLight { get => new Material(RGBColor.White, RGBColor.White, 1.0); }
+        public static Material RedLight { get => new Material(RGBColor.Red, RGBColor.Red, 1.0); }
+        public static Material GreenLight { get => new Material(RGBColor.Green, RGBColor.Green, 1.0); }
+        public static Material BlueLight { get => new Material(RGBColor.Blue, RGBColor.Blue, 1.0); }
     }
 }

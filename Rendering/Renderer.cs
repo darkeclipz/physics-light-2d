@@ -74,11 +74,11 @@ namespace Light2D.Rendering
             (var t, var shape) = Raymarcher.March(ray);
             if (t < Raymarcher.MinMarchDistance)
             {
-                return shape.DiffuseColor;
+                return shape.Material.DiffuseColor;
             }
             if (t < Raymarcher.MaxMarchDistance)
             {
-                return shape.EmissiveColor;
+                return shape.Material.Intensity * shape.Material.EmissiveColor;
             }
             else if(t > Raymarcher.MaxMarchDistance)
             {

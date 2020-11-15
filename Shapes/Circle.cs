@@ -1,4 +1,4 @@
-using Light2D.Colors;
+using Light2D.Rendering;
 
 namespace Light2D.Shapes
 {
@@ -7,7 +7,7 @@ namespace Light2D.Shapes
         public Vector2 Position { get; }
         public double Radius { get; }
 
-        public Circle(Vector2 position, double radius, RGBColor diffuse, RGBColor emissive) : base(diffuse, emissive)
+        public Circle(Vector2 position, double radius, Material material) : base(material)
         {
             Position = position;
             Radius = radius;

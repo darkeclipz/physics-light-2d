@@ -10,12 +10,13 @@ namespace Light2D.Scenes
         private List<Shape> Shapes { get; } = new List<Shape>();
         public RGBColor AmbientColor { get; private set; }
 
+        public Scene() : this(RGBColor.Black) { }
         public Scene(RGBColor ambient)
         {
             AmbientColor = ambient;
         }
 
-        public (double t, Shape shape) Distance(Vector2 point)
+        public (double distance, Shape shape) Distance(Vector2 point)
         {
             var minDistance = double.MaxValue;
             Shape minShape = null;
