@@ -15,6 +15,11 @@ namespace Light2D
         public Vector2(double x) : this(x, x) { }
         public Vector2() : this(0, 0) { }
 
+        public Vector2 XX { get => new Vector2(X, X); }
+        public Vector2 YY { get => new Vector2(Y, Y); }
+        public Vector2 XY { get => new Vector2(X, Y); }
+        public Vector2 YX { get => new Vector2(Y, X); }
+
         public static Vector2 operator +(Vector2 u, Vector2 v) => new Vector2(u.X + v.X, u.Y + v.Y);
         public static Vector2 operator -(Vector2 u, Vector2 v) => new Vector2(u.X - v.X, u.Y - v.Y);
         public static Vector2 operator *(Vector2 u, float scalar) => new Vector2((double)scalar * u.X, (double)scalar * u.Y);

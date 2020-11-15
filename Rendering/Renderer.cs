@@ -6,6 +6,7 @@ using System.Linq;
 using Light2D.Scenes;
 using Light2D.Samplers;
 using Light2D.Colors;
+using Light2D.Debug;
 
 namespace Light2D.Rendering
 {
@@ -24,6 +25,7 @@ namespace Light2D.Rendering
         public void Render(Camera camera, Scene scene, string outputFileName)
         {
             WriteRenderInfo(camera);
+            var nmd = new NormalMapDebugger(camera, scene);
             SceneDistanceBuffer = new SceneDistanceBuffer(camera, scene);
             SceneDistanceBuffer.SaveToFile();
             Status = new RenderStatus(camera.DevicePixelHeight);

@@ -12,11 +12,11 @@ namespace Light2D
         {
             var stopwatch = new Stopwatch();
             var camera = new Camera(500, 500);
-            Scene scene = new ShapesScene();
-            Sampler sampler = new StratifiedSampler(pixelSamples: 4, lightSamples: 64);
+            Scene scene = new ReflectionScene();
+            Sampler sampler = new StratifiedSampler(pixelSamples: 4, lightSamples: 16);
             var renderer = new Renderer(sampler);
             stopwatch.Start();
-            renderer.Render(camera, scene, "images/scene-shapes-ps4_ls64.png");
+            renderer.Render(camera, scene, "images/test.png");
             stopwatch.Stop();
             Console.WriteLine($"Total render time: {stopwatch.Elapsed}");
         }
