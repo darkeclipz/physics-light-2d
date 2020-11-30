@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N+D7putqtXXgvumAsGjvvyxts2F39d3AngpSg92AdZregmX8DI4QbvT2MmNIsL6tJ2x7m0ZOsnGMMs/tuh1ggw==",
+  "dgSpecHash": "VZNwRZrAzeOPM9hy/efxJh6Rm/xIsST0ZAsY8WQwE7tVWnVfdJIO/+PQ3VM0tlx8Tu9lZPq5ti2IOu1tYlg2Yg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lars\\Documents\\Repos\\physics-light-2d\\Light2D.csproj",
+  "projectFilePath": "C:\\Users\\Lars\\Documents\\Repos\\Light2D\\Light2D.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lars\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Lars\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
