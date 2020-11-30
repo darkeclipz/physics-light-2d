@@ -91,7 +91,6 @@ namespace Light2D.Rendering
                 }
 
                 // TODO: Refraction
-
                 return shape.Material.Intensity * shape.Material.EmissiveColor;
             }
             else if(t > Raymarcher.MaxMarchDistance)
