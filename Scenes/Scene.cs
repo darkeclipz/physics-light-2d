@@ -37,10 +37,10 @@ namespace Light2D.Scenes
         public Vector2 NormalAtPoint(Vector2 point)
         {
             var eps = new Vector2(0.0001, 0);
-            (var x1, _) = Distance(point + eps.XY);
-            (var x2, _) = Distance(point - eps.XY);
-            (var y1, _) = Distance(point + eps.YX);
-            (var y2, _) = Distance(point - eps.YX);
+            (var x1, _) = Distance(point - eps.XY);
+            (var x2, _) = Distance(point + eps.XY);
+            (var y1, _) = Distance(point - eps.YX);
+            (var y2, _) = Distance(point + eps.YX);
             return new Vector2(x2 - x1, y2 - y1).Normalize();
         }
     }

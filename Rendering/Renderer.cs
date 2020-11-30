@@ -25,7 +25,7 @@ namespace Light2D.Rendering
         public void Render(Camera camera, Scene scene, string outputFileName)
         {
             WriteRenderInfo(camera);
-            // var nmd = new NormalMapDebugger(camera, scene);
+            var nmd = new NormalMapDebugger(camera, scene);
             SceneDistanceBuffer = new SceneDistanceBuffer(camera, scene);
             SceneDistanceBuffer.SaveToFile();
             Status = new RenderStatus(camera.DevicePixelHeight);
